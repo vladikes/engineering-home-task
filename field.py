@@ -1,5 +1,3 @@
-
-
 class FieldDesigner:
     """
     Designs a field for BattleShips
@@ -27,20 +25,3 @@ class FieldDesigner:
             self,
     ):
         return '\n'.join(map(str, self.field))
-
-
-
-def main():
-    battle_field = FieldDesigner()
-    battle_field.design_field(
-        height=10,
-        width=10,
-    )
-
-    print(battle_field)
-
-
-if __name__ == '__main__':
-    main()
-
-
