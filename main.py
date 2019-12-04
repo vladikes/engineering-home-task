@@ -23,8 +23,10 @@ def main():
     )
 
     ship_dispatcher = BattleShip(
-        length=BATTLESHIP_PROPERTIES['submarine']['length'],
+        ship_length=BATTLESHIP_PROPERTIES['submarine']['length'],
         direction=None,
+        max_field_grid=9,
+        field='some_field',
     )
 
 
