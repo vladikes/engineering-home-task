@@ -4,6 +4,7 @@ from random import randint
 
 
 class BattleShip:
+    SHIPS_SHAPE = '#'
 
     def __init__(
             self,
@@ -40,7 +41,7 @@ class BattleShip:
         )
 
         for i in self.field.field[y:y + self.ship_length]:
-            i[x] = '#'
+            i[x] = self.SHIPS_SHAPE
 
         return self.field
 
