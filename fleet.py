@@ -8,11 +8,7 @@ class Ship:
     position: list = field(
         default_factory=list,
     )
-    place: list = field(
-        default_factory=list,
-    )
     length: int = 0
-    field: str = None
 
 
 @dataclass

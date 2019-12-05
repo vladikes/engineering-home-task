@@ -13,14 +13,12 @@ class BattleShip:
             max_field_grid,
             field,
             type,
-            place=None,
     ):
         self.ship_length = ship_length
         self.direction = direction
         self.max_field_grid = max_field_grid
         self.field = field
         self.type = type
-        self.place = place
 
     def place_ship(
             self,
@@ -43,11 +41,9 @@ class BattleShip:
         for i in self.field.field[y:y + self.ship_length]:
             i[x] = self.SHIPS_SHAPE
 
-        return self.field, Ship(
-            field=self.field,
+        return Ship(
             position=[x, y],
             length=self.ship_length,
             direction=self.direction,
             type=self.type,
-            place = self.place
         )
