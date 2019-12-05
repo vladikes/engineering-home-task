@@ -21,9 +21,6 @@ class FieldDesigner:
 
         return self.field
 
-    def add_ship(self, x, y):
-        return self.field[y][x: x + 2]
-
     def __str__(
             self,
     ):
