@@ -4,14 +4,12 @@ This program attempts to design a battlefield for different types of ships, and 
 
 ### Walkthrough
 
-You will implement the following functions:
+A general Walkthrough of the different functionalities
 
 * `field.py`: This module is responsible for the field range creation
 * `fleet.py`: This module is responsible to hold the state of the ships such as their type and position in a dataclass
 * `battleship.py`: The class is responsible for the battleship creation as well as checkups
 * `main.py`: This is where the magic of battleship happens, the creation and configuration
-
-All functions avoid placing vessels on top of, or adjacent to, other vessels.
 
 ### Instructions:
 
