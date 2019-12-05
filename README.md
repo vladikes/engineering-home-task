@@ -28,14 +28,5 @@ Then the different types of ships can be instantiated from within the Battleship
 an example of an output:
 
 Fleet(Ships=[Ship(type='submarine', direction=None, position=[2, 4], length=1), Ship(type='cruiser', direction='horizontal', position=[4, 5], length=3), Ship(type='destroyer', direction='horizontal', position=[8, 5], length=2), Ship(type='carrier', direction='vertical', position=[3, 7], length=4)])
-['~', '~', '~', '~', '~', '~', '~', '~', '~', '~']
-['~', '~', '~', '~', '~', '~', '~', '~', '~', '~']
-['~', '~', '~', '~', '~', '~', '~', '~', '~', '~']
-['~', '~', '~', '~', '~', '~', '~', '~', '~', '~']
-['~', '~', '#', '~', '~', '~', '~', '~', '~', '~']
-['~', '~', '~', '~', '#', '#', '#', '~', '#', '#']
-['~', '~', '~', '#', '~', '~', '~', '~', '~', '~']
-['~', '~', '~', '#', '~', '~', '~', '~', '~', '~']
-['~', '~', '~', '#', '~', '~', '~', '~', '~', '~']
-['~', '~', '~', '#', '~', '~', '~', '~', '~', '~']
 
+And you should also see the grid itself.
