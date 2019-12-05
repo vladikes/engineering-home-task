@@ -1,4 +1,6 @@
 import random
+from fleet import Ship
+from random import randint
 
 
 class BattleShip:
@@ -9,53 +11,44 @@ class BattleShip:
             direction,
             max_field_grid,
             field,
+            type,
+            place=None,
     ):
         self.ship_length = ship_length
         self.direction = direction
         self.max_field_grid = max_field_grid
         self.field = field
-        self.place_ship()
+        self.type = type
+        self.place = place
 
     def place_ship(
             self,
     ):
         min_field_grid = 1
-        x = random.choice(range(min_field_grid, self.max_field_grid,))
-        y = random.choice(range(min_field_grid, self.max_field_grid,))
-
-        return [
-                x, y,
-                self.field,
-                self.ship_length,
-                self.direction,
-        ]
-
-    def __str__(self):
-        return '{}, {}'.format(self.ship_length, self.direction,)
-
-    @classmethod
-    def place_submarine(cls):
-        return cls(
-            ship_length=10,
-            direction='vertical',
-            field=None,
-            max_field_grid=10,
+        x = random.choice(
+            range(
+                min_field_grid,
+                self.max_field_grid,
+            )
         )
 
-    @classmethod
-    def place_destroyer(cls):
-        return cls(
-            ship_length=10,
+        y = random.choice(
+            range(
+                min_field_grid,
+                self.max_field_grid,
+            )
         )
 
-    @classmethod
-    def place_cruiser(cls):
-        return cls(
-            ship_length=10,
-        )
+        for i in self.field.field[y:y + self.ship_length]:
+            i[x] = '#'
 
-    @classmethod
-    def place_carrier(cls):
-        return cls(
-            ship_length=10,
-        )
+        return self.field
+
+        # return Ship(
+        #     field=self.field,
+        #     position=[x, y],
+        #     length=self.ship_length,
+        #     direction=self.direction,
+        #     type=self.type,
+        #     place = self.place
+        # )
