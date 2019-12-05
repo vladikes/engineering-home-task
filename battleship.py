@@ -43,13 +43,11 @@ class BattleShip:
         for i in self.field.field[y:y + self.ship_length]:
             i[x] = self.SHIPS_SHAPE
 
-        return self.field
-
-        # return Ship(
-        #     field=self.field,
-        #     position=[x, y],
-        #     length=self.ship_length,
-        #     direction=self.direction,
-        #     type=self.type,
-        #     place = self.place
-        # )
+        return self.field, Ship(
+            field=self.field,
+            position=[x, y],
+            length=self.ship_length,
+            direction=self.direction,
+            type=self.type,
+            place = self.place
+        )

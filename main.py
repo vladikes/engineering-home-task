@@ -70,7 +70,7 @@ def main():
     )
 
 
-    # print(fleet_inventory)
+    print(fleet_inventory)
     print(battle_field)
 
 
