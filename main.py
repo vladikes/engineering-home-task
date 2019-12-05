@@ -1,19 +1,22 @@
 from field import FieldDesigner
 from battleship import BattleShip
 from fleet import Fleet
-import random
+
 
 def main():
+    """
+    Holds battlefield and fleet properties as well as field and battleship classes.
+    """
     BATTLEFIELD_CONF = {
         'field_height': 10,
         'field_width': 10,
     }
 
-    BATTLESHIP_PROPERTIES = {
-        'submarine': {'length': 1},
-        'destroyer': {'length': 2},
-        'cruiser': {'length': 3},
-        'carrier': {'length': 4},
+    FLEET_PROPERTIES = {
+        'submarine': {'length': 1, 'direction': None, },
+        'destroyer': {'length': 2, 'direction': 'horizontal', },
+        'cruiser': {'length': 3, 'direction': 'horizontal', },
+        'carrier': {'length': 4, 'direction': 'vertical', },
     }
 
     battle_field = FieldDesigner()
@@ -24,32 +27,32 @@ def main():
     )
 
     submarine = BattleShip(
-        ship_length=BATTLESHIP_PROPERTIES['submarine']['length'],
-        direction='horizontal',
+        ship_length=FLEET_PROPERTIES['submarine']['length'],
+        direction=FLEET_PROPERTIES['submarine']['direction'],
         field=battle_field,
         max_field_grid=BATTLEFIELD_CONF['field_width'],
         type='submarine',
     )
 
     cruiser = BattleShip(
-        ship_length=BATTLESHIP_PROPERTIES['cruiser']['length'],
-        direction='horizontal',
+        ship_length=FLEET_PROPERTIES['cruiser']['length'],
+        direction=FLEET_PROPERTIES['cruiser']['direction'],
         field=battle_field,
         max_field_grid=BATTLEFIELD_CONF['field_width'],
         type='cruiser',
     )
 
     destroyer = BattleShip(
-        ship_length=BATTLESHIP_PROPERTIES['destroyer']['length'],
-        direction='horizontal',
+        ship_length=FLEET_PROPERTIES['destroyer']['length'],
+        direction=FLEET_PROPERTIES['destroyer']['direction'],
         field=battle_field,
         max_field_grid=BATTLEFIELD_CONF['field_width'],
         type='destroyer',
     )
 
     carrier = BattleShip(
-        ship_length=BATTLESHIP_PROPERTIES['carrier']['length'],
-        direction='horizontal',
+        ship_length=FLEET_PROPERTIES['carrier']['length'],
+        direction=FLEET_PROPERTIES['carrier']['direction'],
         field=battle_field,
         max_field_grid=BATTLEFIELD_CONF['field_width'],
         type='carrier',
@@ -69,10 +72,8 @@ def main():
          ]
     )
 
-
     print(fleet_inventory)
     print(battle_field)
-
 
 if __name__ == '__main__':
     main()

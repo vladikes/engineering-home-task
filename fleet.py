@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 
-
+"""
+Holds ship information and fleet object dataclasses
+"""
 @dataclass
 class Ship:
     type: str = None

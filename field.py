@@ -1,6 +1,6 @@
 class FieldDesigner:
     """
-    Designs a field for BattleShips
+    Designs a field for BattleShips, accepts field height and width
     """
     def __init__(
             self,
@@ -14,7 +14,7 @@ class FieldDesigner:
     ):
 
         self.field = [[
-                '0' for __
+                '~' for __
                 in range(height)]
                 for __ in range(width)
         ]

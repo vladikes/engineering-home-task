@@ -1,9 +1,43 @@
-# Engineering Task
+# Field Designer
 
-Welcome! Thank you for applying for an engineering position @ [Trustdome](https://www.trustdome.com)! In order for us to successfully evaluate your application, please do the following:
+This program attempts to design a battlefield for different types of ships, and to hold the ship state for further developments.
 
-1. Fork this repository under your GitHub user. You may make it a private repository if you prefer, in which case, please grant read access to `arikkfir` specifically.
+### Walkthrough
 
-2. Implement the exercise as described in [`BATTLESHIP_FIELD_DESIGNER.md`](BATTLESHIP_FIELD_DESIGNER.md), commit & push back the source code to your fork.
+You will implement the following functions:
 
-Please make sure the source code you commit and push to your fork is not encumbered by any existing restriction, and complies with the [LICENSE](LICENSE) here.
+* `field.py`: This module is responsible for the field range creation
+* `fleet.py`: This module is responsible to hold the state of the ships such as their type and position in a dataclass
+* `battleship.py`: The class is responsible for the battleship creation as well as checkups
+* `main.py`: This is where the magic of battleship happens, the creation and configuration
+
+All functions avoid placing vessels on top of, or adjacent to, other vessels.
+
+### Instructions:
+
+Run the main.py file by typing python(version number) main.py
+
+That should run and generate the ships and the field.
+
+It works as follows:
+
+battlefield and fleet properties are created within a dict.
+
+field class is initiated with the design.field method that accepts width and height.
+
+Then the different types of ships can be instantiated from within the Battleship class and stored within the fleet_inventory dataclass
+
+an example of an output:
+
+Fleet(Ships=[Ship(type='submarine', direction=None, position=[2, 4], length=1), Ship(type='cruiser', direction='horizontal', position=[4, 5], length=3), Ship(type='destroyer', direction='horizontal', position=[8, 5], length=2), Ship(type='carrier', direction='vertical', position=[3, 7], length=4)])
+['~', '~', '~', '~', '~', '~', '~', '~', '~', '~']
+['~', '~', '~', '~', '~', '~', '~', '~', '~', '~']
+['~', '~', '~', '~', '~', '~', '~', '~', '~', '~']
+['~', '~', '~', '~', '~', '~', '~', '~', '~', '~']
+['~', '~', '#', '~', '~', '~', '~', '~', '~', '~']
+['~', '~', '~', '~', '#', '#', '#', '~', '#', '#']
+['~', '~', '~', '#', '~', '~', '~', '~', '~', '~']
+['~', '~', '~', '#', '~', '~', '~', '~', '~', '~']
+['~', '~', '~', '#', '~', '~', '~', '~', '~', '~']
+['~', '~', '~', '#', '~', '~', '~', '~', '~', '~']
+
